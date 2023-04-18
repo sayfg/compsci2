@@ -1,0 +1,37 @@
+{% extends "base.html"%}
+<title>{% block title %}Home{% endblock %}</title>
+{% block content%}
+<h1>This is the home page</h1>
+{% endblock %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<div class="container">
+  <button class="btn" id="create-folder">Create Folder</button>
+  <div id="folders"></div>
+</div>
+
+<div class="container">
+  <button class="btn" id="create-folder">Create Folder</button>
+  <div id="folders"></div>
+  <button class="btn" id="create-flashcard">Create Flashcard</button>
+</div>
+
+{% extends "base.html"%}<title>{% block title %}Home{% endblock %}</title>
+{% block content%}
+
+<div class="container">
+    <button class="btn" id="create-folder">Create Folder</button>
+    <div id="folders">
+        {% for folder in folders %}
+        <div class="card">
+            <div class="delete">&times;</div>
+            {{ folder.name }}
+        </div>
+        {% endfor %}
+    </div>
+    <button class="btn" id="create-flashcard">Create Flashcard</button>
+</div>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+.card .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.flashcard .edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
